@@ -37,7 +37,7 @@
 
 ### DELETE /tasks/{id} — отмена задачи
 
-![Delete Task](docs/screenshots/07-delete-task-response.png)
+![Delete Task](docs/screenshots/07-delete-task.png)
 
 ## Архитектура
 
@@ -51,7 +51,7 @@ flowchart TD
     Worker --> SendEmail[send_email]
     Worker --> ProcessData[process_data]
     Worker --> GenerateReport[generate_report]
-
+```
 ## Стек
 
 - **Python 3.12+**
@@ -76,7 +76,7 @@ docker-compose up -d
 # API: http://localhost:8000/docs
 # RabbitMQ: http://localhost:15672 (guest/guest)
 # Metrics: http://localhost:8000/metrics
-
+```
 ## API Endpoints
 
 Метод	Эндпоинт	Описание
