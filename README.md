@@ -52,6 +52,7 @@ flowchart TD
     Worker --> ProcessData[process_data]
     Worker --> GenerateReport[generate_report]
 ```
+
 ## Стек
 
 - **Python 3.12+**
@@ -77,63 +78,71 @@ docker-compose up -d
 # RabbitMQ: http://localhost:15672 (guest/guest)
 # Metrics: http://localhost:8000/metrics
 ```
+
 ## API Endpoints
 
-Метод	Эндпоинт	Описание
-POST	/tasks	Создание задачи
-GET	/tasks/{task_id}	Получение задачи
-GET	/tasks	Список задач
-DELETE	/tasks/{task_id}	Отмена задачи
-GET	/health	Health Check
-GET	/metrics	Метрики Prometheus
+| Метод | Эндпоинт | Описание |
+|-------|----------|-----------|
+| POST  | `/tasks` | Создание задачи |
+| GET   | `/tasks/{task_id}` | Получение задачи |
+| GET   | `/tasks` | Список задач |
+| DELETE| `/tasks/{task_id}` | Отмена задачи |
+| GET   | `/health` | Health Check |
+| GET   | `/metrics` | Метрики Prometheus |
 
-Установка
+## Установка
 
-# Клонирование
+```bash
 git clone https://github.com/SmailsZX/async-task-queue.git
 cd async-task-queue
 
-# Создание виртуального окружения
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
-# или
 venv\Scripts\activate     # Windows
 
-# Установка зависимостей
 pip install -r requirements.txt
+```
 
-Запуск через Docker
+## Запуск через Docker
 
-# Запуск всех сервисов
+```bash
 docker-compose up -d
 
-# Просмотр логов
 docker-compose logs -f app
 docker-compose logs -f worker
+```
 
-Ручной запуск
+## Ручной запуск
 
+```bash
 # Сервер
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
 # Воркер
 taskiq worker app.tasks.worker:broker
 # или
 python -m app.tasks.worker_runner
+```
 
-Типы задач
+## Типы задач
 
-Тип	Описание	Payload
-send_email	Имитация отправки email	{to, subject, body?, fail?, delay?}
-process_data	Обработка данных	{data, fail?, delay?}
-generate_report	Генерация отчёта	{report_type, fail?, delay?}
+| Тип | Описание | Payload |
+|-----|----------|---------|
+| `send_email` | Имитация отправки email | `{to, subject, body?, fail?, delay?}` |
+| `process_data` | Обработка данных | `{data, fail?, delay?}` |
+| `generate_report` | Генерация отчёта | `{report_type, fail?, delay?}` |
 
-Переменные окружения
+## Переменные окружения
 
-Скопируйте .env.example в .env и настройте под вашу среду:
+Скопируйте `.env.example` в `.env` и настройте под вашу среду:
+
+```bash
 cp .env.example .env
+```
 
-Тесты
+## Тесты
 
+```bash
 # Запуск всех тестов
 pytest
 
@@ -142,52 +151,54 @@ pytest --cov=app --cov-report=term-missing
 
 # Конкретный файл
 pytest tests/test_api.py -v
+```
 
-Структура проекта
+## Структура проекта
 
+```
 async-task-queue/
 ├── app/
-│   ├── main.py              # FastAPI приложение
-│   ├── config.py            # Pydantic Settings
-│   ├── db.py                # SQLAlchemy engine/session
+│   ├── main.py
+│   ├── config.py
+│   ├── db.py
 │   ├── api/
-│   │   ├── routes.py        # API эндпоинты
-│   │   └── deps.py          # Зависимости FastAPI
+│   │   ├── routes.py
+│   │   └── deps.py
 │   ├── core/
-│   │   ├── redis.py         # Redis клиент
-│   │   ├── rabbit.py        # RabbitMQ клиент
-│   │   └── queue.py         # Логика очереди
+│   │   ├── redis.py
+│   │   ├── rabbit.py
+│   │   └── queue.py
 │   ├── tasks/
-│   │   ├── handlers.py      # Обработчики задач
-│   │   ├── worker.py        # Taskiq воркер
-│   │   └── worker_runner.py # Запуск воркера
+│   │   ├── handlers.py
+│   │   ├── worker.py
+│   │   └── worker_runner.py
 │   ├── models/
-│   │   └── task.py          # SQLAlchemy модель
+│   │   └── task.py
 │   ├── schemas/
-│   │   └── task.py          # Pydantic схемы
+│   │   └── task.py
 │   └── utils/
-│       ├── logger.py        # Structlog
-│       └── metrics.py       # Prometheus метрики
+│       ├── logger.py
+│       └── metrics.py
 ├── tests/
-│   ├── conftest.py          # Фикстуры
-│   ├── test_api.py          # Тесты API
-│   ├── test_queue.py        # Тесты очереди
-│   └── test_worker.py       # Тесты воркера
+│   ├── conftest.py
+│   ├── test_api.py
+│   ├── test_queue.py
+│   └── test_worker.py
 ├── docker-compose.yml
 ├── Dockerfile
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
 └── README.md
+```
 
-Обработка ошибок
-Retry: до max_retries попыток с экспоненциальной задержкой
+## Обработка ошибок
 
-Timeout: задача прерывается по истечении TASK_TIMEOUT
+- **Retry**: до `max_retries` попыток с экспоненциальной задержкой
+- **Timeout**: задача прерывается по истечении `TASK_TIMEOUT`
+- **Dead Letter Queue**: задачи, исчерпавшие retry, попадают в `tasks.dlq`
+- **Rate Limiting**: ограничение 100 запросов/минуту на API
 
-Dead Letter Queue: задачи, исчерпавшие retry, попадают в tasks.dlq
+## Лицензия
 
-Rate Limiting: ограничение 100 запросов/минуту на API
-
-Лицензия
 MIT
