@@ -1,0 +1,285 @@
+- generic [ref=f6e2]:
+  - generic [ref=f6e25]:
+    - list [ref=f6e26]:
+      - listitem [ref=f6e27]:
+        - generic [ref=f6e28]: Refreshed 2026-10-06 12:32:42
+        - combobox "Refreshed 2026-10-06 12:32:42" [ref=f6e29]:
+          - option "Refresh every 5 seconds" [selected]
+          - option "Refresh every 10 seconds"
+          - option "Refresh every 30 seconds"
+          - option "Do not refresh"
+      - listitem [ref=f6e30]:
+        - text: Virtual host
+        - combobox "Virtual host" [ref=f6e31]:
+          - option "All" [selected]
+          - option "/"
+      - listitem [ref=f6e32]:
+        - text: Cluster
+        - link "rabbit@0afc9a56ef85" [ref=f6e33] [cursor=pointer]:
+          - /url: "#/cluster-name"
+      - listitem [ref=f6e34]:
+        - text: User
+        - link "guest" [ref=f6e35] [cursor=pointer]:
+          - /url: "#/users/guest"
+        - button "Log out" [ref=f6e37] [cursor=pointer]
+    - generic [ref=f6e38]:
+      - link [ref=f6e39] [cursor=pointer]:
+        - /url: "#/"
+        - img "RabbitMQ logo" [ref=f6e40]
+      - generic [ref=f6e41]: RabbitMQ 3.13.7Erlang 26.2.5.16
+    - list [ref=f6e43]:
+      - listitem [ref=f6e44]:
+        - link "Overview" [ref=f6e45] [cursor=pointer]:
+          - /url: "#/"
+      - listitem [ref=f6e46]:
+        - link "Connections" [ref=f6e47] [cursor=pointer]:
+          - /url: "#/connections"
+      - listitem [ref=f6e48]:
+        - link "Channels" [ref=f6e49] [cursor=pointer]:
+          - /url: "#/channels"
+      - listitem [ref=f6e50]:
+        - link "Exchanges" [ref=f6e51] [cursor=pointer]:
+          - /url: "#/exchanges"
+      - listitem [ref=f6e52]:
+        - link "Queues and Streams" [ref=f6e53] [cursor=pointer]:
+          - /url: "#/queues"
+      - listitem [ref=f6e54]:
+        - link "Admin" [ref=f6e55] [cursor=pointer]:
+          - /url: "#/users"
+  - generic [ref=f6e57]:
+    - heading "Overview" [level=1] [ref=f6e58]
+    - generic [ref=f6e59]:
+      - heading "Totals" [level=2] [ref=f6e60] [cursor=pointer]
+      - generic [ref=f6e61]:
+        - heading "Queued messages last minute ?" [level=3] [ref=f6e62]:
+          - text: Queued messages last minute
+          - generic [ref=f6e63] [cursor=pointer]: "?"
+        - generic [ref=f6e64]:
+          - generic [ref=f6e67]:
+            - generic [ref=f6e68]:
+              - generic [ref=f6e69]: 12:31:40
+              - generic [ref=f6e70]: 12:31:50
+              - generic [ref=f6e71]: 12:32:00
+              - generic [ref=f6e72]: 12:32:10
+              - generic [ref=f6e73]: 12:32:20
+              - generic [ref=f6e74]: 12:32:30
+            - generic [ref=f6e75]:
+              - generic [ref=f6e76]: "0.0"
+              - generic [ref=f6e77]: "1.0"
+          - table
+          - table [ref=f6e79]:
+            - rowgroup [ref=f6e80]:
+              - row [ref=f6e81]:
+                - rowheader "Ready" [ref=f6e82]:
+                  - generic "Click to toggle line" [ref=f6e83] [cursor=pointer]: Ready
+                - cell "0" [ref=f6e84]
+              - row [ref=f6e86]:
+                - rowheader "Unacked" [ref=f6e87]:
+                  - generic "Click to toggle line" [ref=f6e88] [cursor=pointer]: Unacked
+                - cell "0" [ref=f6e89]
+              - row [ref=f6e91]:
+                - rowheader "Total" [ref=f6e92]:
+                  - generic "Click to toggle line" [ref=f6e93] [cursor=pointer]: Total
+                - cell "0" [ref=f6e94]
+        - heading "Message rates last minute ?" [level=3] [ref=f6e96]:
+          - text: Message rates last minute
+          - generic [ref=f6e97] [cursor=pointer]: "?"
+        - generic [ref=f6e98]:
+          - generic [ref=f6e101]:
+            - generic [ref=f6e102]:
+              - generic [ref=f6e103]: 12:31:40
+              - generic [ref=f6e104]: 12:31:50
+              - generic [ref=f6e105]: 12:32:00
+              - generic [ref=f6e106]: 12:32:10
+              - generic [ref=f6e107]: 12:32:20
+              - generic [ref=f6e108]: 12:32:30
+            - generic [ref=f6e109]:
+              - generic [ref=f6e110]: 0.0 /s
+              - generic [ref=f6e111]: 1.0 /s
+          - table
+          - table [ref=f6e113]:
+            - rowgroup [ref=f6e114]:
+              - row [ref=f6e115]:
+                - rowheader "Publish" [ref=f6e116]:
+                  - generic "Click to toggle line" [ref=f6e117] [cursor=pointer]: Publish
+                - cell "0.00/s" [ref=f6e118]
+              - row [ref=f6e120]:
+                - rowheader "Publisher confirm" [ref=f6e121]:
+                  - generic "Click to toggle line" [ref=f6e122] [cursor=pointer]: Publisher confirm
+                - cell "0.00/s" [ref=f6e123]
+              - row [ref=f6e125]:
+                - rowheader "Deliver (manual ack)" [ref=f6e126]:
+                  - generic "Click to toggle line" [ref=f6e127] [cursor=pointer]: Deliver (manual ack)
+                - cell "0.00/s" [ref=f6e128]
+          - table [ref=f6e130]:
+            - rowgroup [ref=f6e131]:
+              - row [ref=f6e132]:
+                - rowheader "Deliver (auto ack)" [ref=f6e133]:
+                  - generic "Click to toggle line" [ref=f6e134] [cursor=pointer]: Deliver (auto ack)
+                - cell "0.00/s" [ref=f6e135]
+              - row [ref=f6e137]:
+                - rowheader "Consumer ack" [ref=f6e138]:
+                  - generic "Click to toggle line" [ref=f6e139] [cursor=pointer]: Consumer ack
+                - cell "0.00/s" [ref=f6e140]
+              - row [ref=f6e142]:
+                - rowheader "Redelivered" [ref=f6e143]:
+                  - generic "Click to toggle line" [ref=f6e144] [cursor=pointer]: Redelivered
+                - cell "0.00/s" [ref=f6e145]
+          - table [ref=f6e147]:
+            - rowgroup [ref=f6e148]:
+              - row [ref=f6e149]:
+                - rowheader "Get (manual ack)" [ref=f6e150]:
+                  - generic "Click to toggle line" [ref=f6e151] [cursor=pointer]: Get (manual ack)
+                - cell "0.00/s" [ref=f6e152]
+              - row [ref=f6e154]:
+                - rowheader "Get (auto ack)" [ref=f6e155]:
+                  - generic "Click to toggle line" [ref=f6e156] [cursor=pointer]: Get (auto ack)
+                - cell "0.00/s" [ref=f6e157]
+              - row [ref=f6e159]:
+                - rowheader "Get (empty)" [ref=f6e160]:
+                  - generic "Click to toggle line" [ref=f6e161] [cursor=pointer]: Get (empty)
+                - cell "0.00/s" [ref=f6e162]
+          - table [ref=f6e164]:
+            - rowgroup [ref=f6e165]:
+              - row [ref=f6e166]:
+                - rowheader "Unroutable (return)" [ref=f6e167]:
+                  - generic "Click to toggle line" [ref=f6e168] [cursor=pointer]: Unroutable (return)
+                - cell "0.00/s" [ref=f6e169]
+              - row [ref=f6e171]:
+                - rowheader "Unroutable (drop)" [ref=f6e172]:
+                  - generic "Click to toggle line" [ref=f6e173] [cursor=pointer]: Unroutable (drop)
+                - cell "0.00/s" [ref=f6e174]
+              - row [ref=f6e176]:
+                - rowheader "Disk read" [ref=f6e177]:
+                  - generic "Click to toggle line" [ref=f6e178] [cursor=pointer]: Disk read
+                - cell "0.00/s" [ref=f6e179]
+              - row [ref=f6e181]:
+                - rowheader "Disk write" [ref=f6e182]:
+                  - generic "Click to toggle line" [ref=f6e183] [cursor=pointer]: Disk write
+                - cell "0.00/s" [ref=f6e184]
+        - heading "Global counts ?" [level=3] [ref=f6e186]:
+          - text: Global counts
+          - generic [ref=f6e187] [cursor=pointer]: "?"
+        - list [ref=f6e188]:
+          - listitem [ref=f6e189]:
+            - link [ref=f6e190] [cursor=pointer]:
+              - /url: "#/connections"
+              - text: "Connections:"
+              - strong [ref=f6e191]: "4"
+          - listitem [ref=f6e192]:
+            - link [ref=f6e193] [cursor=pointer]:
+              - /url: "#/channels"
+              - text: "Channels:"
+              - strong [ref=f6e194]: "4"
+          - listitem [ref=f6e195]:
+            - link [ref=f6e196] [cursor=pointer]:
+              - /url: "#/exchanges"
+              - text: "Exchanges:"
+              - strong [ref=f6e197]: "8"
+          - listitem [ref=f6e198]:
+            - link [ref=f6e199] [cursor=pointer]:
+              - /url: "#/queues"
+              - text: "Queues:"
+              - strong [ref=f6e200]: "2"
+          - listitem [ref=f6e201]:
+            - 'link "Consumers: 1"':
+              - /url: "#"
+              - text: "Consumers:"
+              - strong: "1"
+    - generic [ref=f6e202]:
+      - heading "Nodes" [level=2] [ref=f6e203] [cursor=pointer]
+      - table [ref=f6e205]:
+        - rowgroup [ref=f6e206]:
+          - row [ref=f6e207]:
+            - columnheader "Name" [ref=f6e208]
+            - columnheader "File descriptors ?" [ref=f6e209]:
+              - text: File descriptors
+              - generic [ref=f6e210] [cursor=pointer]: "?"
+            - columnheader "Socket descriptors ?" [ref=f6e211]:
+              - text: Socket descriptors
+              - generic [ref=f6e212] [cursor=pointer]: "?"
+            - columnheader "Erlang processes" [ref=f6e213]
+            - columnheader "Memory ?" [ref=f6e214]:
+              - text: Memory
+              - generic [ref=f6e215] [cursor=pointer]: "?"
+            - columnheader "Disk space" [ref=f6e216]
+            - columnheader "Uptime" [ref=f6e217]
+            - columnheader "Cores" [ref=f6e218]
+            - columnheader "Info" [ref=f6e219]
+            - columnheader "Reset stats" [ref=f6e220]
+            - columnheader "+/-" [ref=f6e221]
+          - row [ref=f6e222]:
+            - cell [ref=f6e223]:
+              - link "rabbit@0afc9a56ef85" [ref=f6e224] [cursor=pointer]:
+                - /url: "#/nodes/rabbit%400afc9a56ef85"
+            - cell "49 1048576 available" [ref=f6e225]:
+              - generic [ref=f6e226]:
+                - generic [ref=f6e227]: "49"
+                - subscript [ref=f6e228]: 1048576 available
+            - cell "4 943629 available" [ref=f6e229]:
+              - generic [ref=f6e230]:
+                - generic [ref=f6e231]: "4"
+                - subscript [ref=f6e232]: 943629 available
+            - cell "501 1048576 available" [ref=f6e233]:
+              - generic [ref=f6e234]:
+                - generic [ref=f6e235]: "501"
+                - subscript [ref=f6e236]: 1048576 available
+            - cell "164 MiB 5.4 GiB high watermark" [ref=f6e237]:
+              - generic [ref=f6e238]:
+                - generic [ref=f6e239]: 164 MiB
+                - subscript [ref=f6e240]: 5.4 GiB high watermark
+            - cell "937 GiB 48 MiB low watermark" [ref=f6e241]:
+              - generic [ref=f6e242]:
+                - generic [ref=f6e243]: 937 GiB
+                - subscript [ref=f6e244]: 48 MiB low watermark
+            - cell "20m 24s" [ref=f6e245]
+            - cell "12" [ref=f6e247]
+            - cell "basic 2 rss" [ref=f6e249]:
+              - generic "Message rates" [ref=f6e250]: basic
+              - 'generic "Enabled plugins: rabbitmq_management, rabbitmq_prometheus" [ref=f6e251]': "2"
+              - generic "Memory calculation strategy" [ref=f6e252]: rss
+            - cell [ref=f6e253]:
+              - button "This node" [ref=f6e255] [cursor=pointer]
+              - button "All nodes" [ref=f6e257] [cursor=pointer]
+    - generic [ref=f6e258]:
+      - heading "Churn statistics" [level=2] [ref=f6e259] [cursor=pointer]
+      - text: "? ? ?"
+    - heading "Ports and contexts" [level=2] [ref=f6e261] [cursor=pointer]
+    - generic [ref=f6e262]:
+      - heading "Export definitions" [level=2] [ref=f6e263] [cursor=pointer]
+      - text: "?"
+    - generic [ref=f6e264]:
+      - heading "Import definitions" [level=2] [ref=f6e265] [cursor=pointer]
+      - text: "?"
+  - generic [ref=f6e266]:
+    - list:
+      - listitem [ref=f6e267]:
+        - link "HTTP API" [ref=f6e268] [cursor=pointer]:
+          - /url: api/
+      - listitem [ref=f6e269]:
+        - link "Documentation" [ref=f6e270] [cursor=pointer]:
+          - /url: https://www.rabbitmq.com/docs
+      - listitem [ref=f6e271]:
+        - link "Tutorials" [ref=f6e272] [cursor=pointer]:
+          - /url: https://www.rabbitmq.com/tutorials
+      - listitem [ref=f6e273]:
+        - link "New releases" [ref=f6e274] [cursor=pointer]:
+          - /url: https://www.rabbitmq.com/release-information
+      - listitem [ref=f6e275]:
+        - link "Commercial edition" [ref=f6e276] [cursor=pointer]:
+          - /url: https://www.vmware.com/products/rabbitmq.html
+      - listitem [ref=f6e277]:
+        - link "Commercial support" [ref=f6e278] [cursor=pointer]:
+          - /url: https://www.rabbitmq.com/commercial-offerings
+      - listitem [ref=f6e279]:
+        - link "Discussions" [ref=f6e280] [cursor=pointer]:
+          - /url: https://github.com/rabbitmq/rabbitmq-server/discussions
+      - listitem [ref=f6e281]:
+        - link "Discord" [ref=f6e282] [cursor=pointer]:
+          - /url: https://rabbitmq.com/discord/
+      - listitem [ref=f6e283]:
+        - link "Plugins" [ref=f6e284] [cursor=pointer]:
+          - /url: https://www.rabbitmq.com/docs/plugins
+      - listitem [ref=f6e285]:
+        - link "GitHub" [ref=f6e286] [cursor=pointer]:
+          - /url: https://www.rabbitmq.com/github

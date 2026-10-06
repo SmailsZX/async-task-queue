@@ -1,0 +1,129 @@
+- generic [ref=f1e4]:
+  - generic [ref=f1e8]:
+    - heading "Async Task Queue 1.0.0 OAS 3.1" [level=1] [ref=f1e9]:
+      - text: Async Task Queue
+      - generic [ref=f1e10]:
+        - generic [ref=f1e11]: 1.0.0
+        - generic [ref=f1e13]: OAS 3.1
+    - link "/openapi.json" [ref=f1e15] [cursor=pointer]:
+      - /url: /openapi.json
+  - main [ref=f1e17]:
+    - generic [ref=f1e20]:
+      - generic [ref=f1e22]:
+        - heading [level=3] [ref=f1e23] [cursor=pointer]:
+          - link "tasks" [ref=f1e24]:
+            - /url: "#/tasks"
+          - button "Collapse operation" [expanded] [ref=f1e25]
+        - generic [ref=f1e29]:
+          - generic [ref=f1e32] [cursor=pointer]:
+            - button "POST /tasks Create Task Endpoint" [ref=f1e33]:
+              - generic [ref=f1e34]: POST
+              - generic [ref=f1e35]:
+                - link "/tasks" [ref=f1e37]:
+                  - /url: "#/tasks/create_task_endpoint_tasks_post"
+                - generic [ref=f1e38]: Create Task Endpoint
+            - generic "Copy path to clipboard":
+              - button "Copy path to clipboard"
+            - button "post /tasks" [ref=f1e39]
+          - generic [ref=f1e44] [cursor=pointer]:
+            - button "GET /tasks List Tasks Endpoint" [ref=f1e45]:
+              - generic [ref=f1e46]: GET
+              - generic [ref=f1e47]:
+                - link "/tasks" [ref=f1e49]:
+                  - /url: "#/tasks/list_tasks_endpoint_tasks_get"
+                - generic [ref=f1e50]: List Tasks Endpoint
+            - generic "Copy path to clipboard":
+              - button "Copy path to clipboard"
+            - button "get /tasks" [ref=f1e51]
+          - generic [ref=f1e56] [cursor=pointer]:
+            - 'button "GET /tasks/{task_id} Get Task Endpoint" [ref=f1e57]':
+              - generic [ref=f1e58]: GET
+              - generic [ref=f1e59]:
+                - 'link "/tasks/{task_id}" [ref=f1e61]':
+                  - /url: "#/tasks/get_task_endpoint_tasks__task_id__get"
+                - generic [ref=f1e63]: Get Task Endpoint
+            - generic "Copy path to clipboard":
+              - button "Copy path to clipboard"
+            - 'button "get /tasks/{task_id}" [ref=f1e64]'
+          - generic [ref=f1e69] [cursor=pointer]:
+            - 'button "DELETE /tasks/{task_id} Cancel Task Endpoint" [ref=f1e70]':
+              - generic [ref=f1e71]: DELETE
+              - generic [ref=f1e72]:
+                - 'link "/tasks/{task_id}" [ref=f1e74]':
+                  - /url: "#/tasks/cancel_task_endpoint_tasks__task_id__delete"
+                - generic [ref=f1e76]: Cancel Task Endpoint
+            - generic "Copy path to clipboard":
+              - button "Copy path to clipboard"
+            - 'button "delete /tasks/{task_id}" [ref=f1e77]'
+      - generic [ref=f1e81]:
+        - heading [level=3] [ref=f1e82] [cursor=pointer]:
+          - link "default" [ref=f1e83]:
+            - /url: "#/default"
+          - button "Collapse operation" [expanded] [ref=f1e84]
+        - generic [ref=f1e88]:
+          - generic [ref=f1e91] [cursor=pointer]:
+            - button "GET /health Health Check" [ref=f1e92]:
+              - generic [ref=f1e93]: GET
+              - generic [ref=f1e94]:
+                - link "/health" [ref=f1e96]:
+                  - /url: "#/default/health_check_health_get"
+                - generic [ref=f1e97]: Health Check
+            - generic "Copy path to clipboard":
+              - button "Copy path to clipboard"
+            - button "get /health" [ref=f1e98]
+          - generic [ref=f1e103] [cursor=pointer]:
+            - button "GET /metrics Metrics Endpoint" [ref=f1e104]:
+              - generic [ref=f1e105]: GET
+              - generic [ref=f1e106]:
+                - link "/metrics" [ref=f1e108]:
+                  - /url: "#/default/metrics_endpoint_metrics_get"
+                - generic [ref=f1e109]: Metrics Endpoint
+            - generic "Copy path to clipboard":
+              - button "Copy path to clipboard"
+            - button "get /metrics" [ref=f1e110]
+    - generic [ref=f1e115]:
+      - heading [level=4] [ref=f1e116] [cursor=pointer]:
+        - button "Schemas" [expanded] [ref=f1e117]
+      - generic [ref=f1e121]:
+        - article [ref=f1e122]:
+          - generic [ref=f1e123]:
+            - button [ref=f1e124] [cursor=pointer]:
+              - strong [ref=f1e126]: HTTPValidationError
+            - button "Expand all" [ref=f1e130] [cursor=pointer]
+            - strong [ref=f1e131]: object
+        - article [ref=f1e132]:
+          - generic [ref=f1e133]:
+            - button [ref=f1e134] [cursor=pointer]:
+              - strong [ref=f1e136]: TaskCreate
+            - button "Expand all" [ref=f1e140] [cursor=pointer]
+            - strong [ref=f1e141]: object
+        - article [ref=f1e142]:
+          - generic [ref=f1e143]:
+            - button [ref=f1e144] [cursor=pointer]:
+              - strong [ref=f1e146]: TaskListResponse
+            - button "Expand all" [ref=f1e150] [cursor=pointer]
+            - strong [ref=f1e151]: object
+        - article [ref=f1e152]:
+          - generic [ref=f1e153]:
+            - button [ref=f1e154] [cursor=pointer]:
+              - strong [ref=f1e156]: TaskResponse
+            - button "Expand all" [ref=f1e160] [cursor=pointer]
+            - strong [ref=f1e161]: object
+        - article [ref=f1e162]:
+          - generic [ref=f1e163]:
+            - button [ref=f1e164] [cursor=pointer]:
+              - strong [ref=f1e166]: TaskStatus
+            - button "Expand all" [ref=f1e170] [cursor=pointer]
+            - strong [ref=f1e171]: string
+        - article [ref=f1e172]:
+          - generic [ref=f1e173]:
+            - button [ref=f1e174] [cursor=pointer]:
+              - strong [ref=f1e176]: TaskStatusResponse
+            - button "Expand all" [ref=f1e180] [cursor=pointer]
+            - strong [ref=f1e181]: object
+        - article [ref=f1e182]:
+          - generic [ref=f1e183]:
+            - button [ref=f1e184] [cursor=pointer]:
+              - strong [ref=f1e186]: ValidationError
+            - button "Expand all" [ref=f1e190] [cursor=pointer]
+            - strong [ref=f1e191]: object

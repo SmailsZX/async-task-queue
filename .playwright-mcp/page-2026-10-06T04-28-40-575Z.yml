@@ -1,0 +1,192 @@
+- generic [ref=f2e4]:
+  - generic [ref=f2e8]:
+    - heading "Async Task Queue 1.0.0 OAS 3.1" [level=1] [ref=f2e9]:
+      - text: Async Task Queue
+      - generic [ref=f2e10]:
+        - generic [ref=f2e11]: 1.0.0
+        - generic [ref=f2e13]: OAS 3.1
+    - link "/openapi.json" [ref=f2e15] [cursor=pointer]:
+      - /url: /openapi.json
+  - main [ref=f2e17]:
+    - generic [ref=f2e20]:
+      - generic [ref=f2e22]:
+        - heading [level=3] [ref=f2e23] [cursor=pointer]:
+          - link "tasks" [ref=f2e24]:
+            - /url: "#/tasks"
+          - button "Collapse operation" [expanded] [ref=f2e25]
+        - generic [ref=f2e29]:
+          - generic [ref=f2e32] [cursor=pointer]:
+            - button "POST /tasks Create Task Endpoint" [ref=f2e33]:
+              - generic [ref=f2e34]: POST
+              - generic [ref=f2e35]:
+                - link "/tasks" [ref=f2e37]:
+                  - /url: "#/tasks/create_task_endpoint_tasks_post"
+                - generic [ref=f2e38]: Create Task Endpoint
+            - generic "Copy path to clipboard":
+              - button "Copy path to clipboard"
+            - button "post /tasks" [ref=f2e39]
+          - generic [ref=f2e44] [cursor=pointer]:
+            - button "GET /tasks List Tasks Endpoint" [ref=f2e45]:
+              - generic [ref=f2e46]: GET
+              - generic [ref=f2e47]:
+                - link "/tasks" [ref=f2e49]:
+                  - /url: "#/tasks/list_tasks_endpoint_tasks_get"
+                - generic [ref=f2e50]: List Tasks Endpoint
+            - generic "Copy path to clipboard":
+              - button "Copy path to clipboard"
+            - button "get /tasks" [ref=f2e51]
+          - generic [ref=f2e55]:
+            - generic [ref=f2e56] [cursor=pointer]:
+              - 'button "GET /tasks/{task_id} Get Task Endpoint" [expanded] [ref=f2e57]':
+                - generic [ref=f2e58]: GET
+                - generic [ref=f2e59]:
+                  - 'link "/tasks/{task_id}" [ref=f2e61]':
+                    - /url: "#/tasks/get_task_endpoint_tasks__task_id__get"
+                  - generic [ref=f2e63]: Get Task Endpoint
+              - generic "Copy path to clipboard":
+                - button "Copy path to clipboard"
+              - 'button "get /tasks/{task_id}" [expanded] [ref=f2e64]'
+            - generic [ref=f2e195]:
+              - paragraph [ref=f2e199]: Возвращает задачу по ID с проверкой кэша.
+              - generic [ref=f2e200]:
+                - generic [ref=f2e201]:
+                  - heading "Parameters" [level=4] [ref=f2e204] [cursor=pointer]
+                  - button "Try it out" [ref=f2e206] [cursor=pointer]
+                - table [ref=f2e209]:
+                  - rowgroup [ref=f2e210]:
+                    - row [ref=f2e211]:
+                      - columnheader "Name" [ref=f2e212]
+                      - columnheader "Description" [ref=f2e213]
+                  - rowgroup [ref=f2e214]:
+                    - row [ref=f2e215]:
+                      - cell "task_id *required string (path)" [ref=f2e216]:
+                        - generic [ref=f2e217]: task_id *required
+                        - generic [ref=f2e218]: string
+                        - generic [ref=f2e219]: (path)
+                      - cell [ref=f2e220]:
+                        - textbox "task_id" [disabled] [ref=f2e221]: 15183b95
+              - generic [ref=f2e223]:
+                - heading "Responses" [level=4] [ref=f2e225]
+                - region [ref=f2e227]:
+                  - rowgroup [ref=f2e228]:
+                    - row [ref=f2e229]:
+                      - cell "Code" [ref=f2e230]
+                      - cell "Description" [ref=f2e231]
+                      - cell "Links" [ref=f2e232]
+                  - rowgroup [ref=f2e233]:
+                    - row [ref=f2e234]:
+                      - cell "200" [ref=f2e235]
+                      - cell "Successful Response Media type application/json Controls Accept header. Example Value" [ref=f2e236]:
+                        - paragraph [ref=f2e239]: Successful Response
+                        - generic [ref=f2e241]:
+                          - generic [ref=f2e242]: Media type
+                          - combobox "Media Type" [ref=f2e244]:
+                            - option "application/json" [selected]
+                          - generic [ref=f2e245]:
+                            - text: Controls
+                            - code [ref=f2e246]: Accept
+                            - text: header.
+                        - generic [ref=f2e247]:
+                          - tablist [ref=f2e248]:
+                            - tab "Example Value" [selected] [ref=f2e249] [cursor=pointer]
+                            - tab "Schema" [ref=f2e250] [cursor=pointer]
+                          - tabpanel "Example Value" [ref=f2e251]:
+                            - code [ref=f2e255]: "{ \"id\": \"string\", \"type\": \"string\", \"status\": \"pending\", \"payload\": { \"additionalProp1\": {} }, \"result\": { \"additionalProp1\": {} }, \"error\": \"string\", \"retries\": 0, \"max_retries\": 0, \"created_at\": \"2026-10-06T04:27:31.290Z\", \"updated_at\": \"2026-10-06T04:27:31.298Z\", \"started_at\": \"2026-10-06T04:27:31.298Z\", \"finished_at\": \"2026-10-06T04:27:31.298Z\" }"
+                      - cell "No links" [ref=f2e256]
+                    - row [ref=f2e257]:
+                      - cell "422" [ref=f2e258]
+                      - cell "Validation Error Media type application/json Example Value" [ref=f2e259]:
+                        - paragraph [ref=f2e262]: Validation Error
+                        - generic [ref=f2e264]:
+                          - generic [ref=f2e265]: Media type
+                          - combobox "Media Type" [ref=f2e267]:
+                            - option "application/json" [selected]
+                        - generic [ref=f2e268]:
+                          - tablist [ref=f2e269]:
+                            - tab "Example Value" [selected] [ref=f2e270] [cursor=pointer]
+                            - tab "Schema" [ref=f2e271] [cursor=pointer]
+                          - tabpanel "Example Value" [ref=f2e272]:
+                            - code [ref=f2e276]: "{ \"detail\": [ { \"loc\": [ \"string\", 0 ], \"msg\": \"string\", \"type\": \"string\", \"input\": \"string\", \"ctx\": {} } ] }"
+                      - cell "No links" [ref=f2e277]
+          - generic [ref=f2e69] [cursor=pointer]:
+            - 'button "DELETE /tasks/{task_id} Cancel Task Endpoint" [ref=f2e70]':
+              - generic [ref=f2e71]: DELETE
+              - generic [ref=f2e72]:
+                - 'link "/tasks/{task_id}" [ref=f2e74]':
+                  - /url: "#/tasks/cancel_task_endpoint_tasks__task_id__delete"
+                - generic [ref=f2e76]: Cancel Task Endpoint
+            - generic "Copy path to clipboard":
+              - button "Copy path to clipboard"
+            - 'button "delete /tasks/{task_id}" [ref=f2e77]'
+      - generic [ref=f2e81]:
+        - heading [level=3] [ref=f2e82] [cursor=pointer]:
+          - link "default" [ref=f2e83]:
+            - /url: "#/default"
+          - button "Collapse operation" [expanded] [ref=f2e84]
+        - generic [ref=f2e88]:
+          - generic [ref=f2e91] [cursor=pointer]:
+            - button "GET /health Health Check" [ref=f2e92]:
+              - generic [ref=f2e93]: GET
+              - generic [ref=f2e94]:
+                - link "/health" [ref=f2e96]:
+                  - /url: "#/default/health_check_health_get"
+                - generic [ref=f2e97]: Health Check
+            - generic "Copy path to clipboard":
+              - button "Copy path to clipboard"
+            - button "get /health" [ref=f2e98]
+          - generic [ref=f2e103] [cursor=pointer]:
+            - button "GET /metrics Metrics Endpoint" [ref=f2e104]:
+              - generic [ref=f2e105]: GET
+              - generic [ref=f2e106]:
+                - link "/metrics" [ref=f2e108]:
+                  - /url: "#/default/metrics_endpoint_metrics_get"
+                - generic [ref=f2e109]: Metrics Endpoint
+            - generic "Copy path to clipboard":
+              - button "Copy path to clipboard"
+            - button "get /metrics" [ref=f2e110]
+    - generic [ref=f2e115]:
+      - heading [level=4] [ref=f2e116] [cursor=pointer]:
+        - button "Schemas" [expanded] [ref=f2e117]
+      - generic [ref=f2e121]:
+        - article [ref=f2e122]:
+          - generic [ref=f2e123]:
+            - button [ref=f2e124] [cursor=pointer]:
+              - strong [ref=f2e126]: HTTPValidationError
+            - button "Expand all" [ref=f2e130] [cursor=pointer]
+            - strong [ref=f2e131]: object
+        - article [ref=f2e132]:
+          - generic [ref=f2e133]:
+            - button [ref=f2e134] [cursor=pointer]:
+              - strong [ref=f2e136]: TaskCreate
+            - button "Expand all" [ref=f2e140] [cursor=pointer]
+            - strong [ref=f2e141]: object
+        - article [ref=f2e142]:
+          - generic [ref=f2e143]:
+            - button [ref=f2e144] [cursor=pointer]:
+              - strong [ref=f2e146]: TaskListResponse
+            - button "Expand all" [ref=f2e150] [cursor=pointer]
+            - strong [ref=f2e151]: object
+        - article [ref=f2e152]:
+          - generic [ref=f2e153]:
+            - button [ref=f2e154] [cursor=pointer]:
+              - strong [ref=f2e156]: TaskResponse
+            - button "Expand all" [ref=f2e160] [cursor=pointer]
+            - strong [ref=f2e161]: object
+        - article [ref=f2e162]:
+          - generic [ref=f2e163]:
+            - button [ref=f2e164] [cursor=pointer]:
+              - strong [ref=f2e166]: TaskStatus
+            - button "Expand all" [ref=f2e170] [cursor=pointer]
+            - strong [ref=f2e171]: string
+        - article [ref=f2e172]:
+          - generic [ref=f2e173]:
+            - button [ref=f2e174] [cursor=pointer]:
+              - strong [ref=f2e176]: TaskStatusResponse
+            - button "Expand all" [ref=f2e180] [cursor=pointer]
+            - strong [ref=f2e181]: object
+        - article [ref=f2e182]:
+          - generic [ref=f2e183]:
+            - button [ref=f2e184] [cursor=pointer]:
+              - strong [ref=f2e186]: ValidationError
+            - button "Expand all" [ref=f2e190] [cursor=pointer]
+            - strong [ref=f2e191]: object
